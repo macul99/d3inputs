@@ -2,7 +2,9 @@
 <meta charset="utf-8">
 <title>Input test (circle)</title>
   
-<p>
+<p> <!-- paragraph tag, everything inside will appear in a single line -->
+  <!-- The for attribute of the <label> tag equals to the id attribute of the input element to bind them together -->
+  <!-- <span> tag is used for grouping and applying styles to inline elements -->
   <label for="nRadius" 
          style="display: inline-block; width: 240px; text-align: right">
          radius = <span id="nRadius-value">…</span>
@@ -42,7 +44,7 @@ function update(nRadius) {
 
   // adjust the text on the range slider
   d3.select("#nRadius-value").text(nRadius);
-  d3.select("#nRadius").property("value", nRadius);
+  d3.select("#nRadius").property("value", nRadius); // effective for first update only
 
   // update the rircle radius
   holder.selectAll("circle") 
